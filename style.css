@@ -226,13 +226,14 @@ section {
 
 .home {
   width: 100%;
-  height: 100vh;
+  padding-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .home .home-mac {
+  border-radius: 5%;
   width: 40%;
   position: absolute;
   z-index: -2;
@@ -839,7 +840,8 @@ form textarea {
   .home-mac {
     width: 50% !important;
     height: auto;
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    /* margin-bottom: 10px; */
   }
   .about-img img {
     display: none !important;
@@ -850,6 +852,14 @@ form textarea {
 }
 
 @media (max-width: 920px) {
+  .home {
+    flex-direction: column;
+  } 
+
+  .home-mac {
+
+  }
+
   .button {
     max-width: 44rem;
     display: flex;
@@ -932,10 +942,6 @@ form textarea {
     display: block; /* Mostrar apenas em telas menores */
   }
 
-.home-mac {
-  display: none;
-}
-
   #switch {
     margin: 0.5rem 1rem;
   }
@@ -1010,7 +1016,6 @@ form textarea {
 @media screen and (max-width: 612px) {
   .home {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
